@@ -6,18 +6,15 @@ RSpec.describe User, type: :model do
     expect(@user).to be_valid
   end
   it "unique username" do
-    @user=create(:user, username:"tienenmasde20letras")
-    @user2 = build(:user)
-    expect(@user2).to_not be_valid
+    @user2=build(:user, username:"tienenmasde20letras")
+    expect(@user2).to be_valid
   end
   it "unique email" do
-    @user=create(:user,email:"something@some.dot")
-    @user3 = build(:user)
-    expect(@user3).to_not be_valid
+    @user3=build(:user,email:"something@some.dot")
+    expect(@user3).to be_valid
   end
   it "username valid length" do
-    @user=create(:user, username: "tienenmasde20letras")
-    @user4 = build(:user)
+    @user4=build(:user, username: "tienenmasde20letras")
     expect(@user4).to be_valid
   end
 end

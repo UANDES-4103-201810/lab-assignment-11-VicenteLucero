@@ -12,17 +12,7 @@ FactoryBot.define do
     password "MyString"
   end
 
-  factory :User do
-    username "VicenteLucero"
-    email "vjlucero@miuandes.cl"
-    password "1234567890"
-  end
 
-  factory :Message do
-    user_id 1
-    date Date.new(2019,5,5)
-    content "hola, ¿como estas?"
-  end
 
 # Add other factories in here
 end
